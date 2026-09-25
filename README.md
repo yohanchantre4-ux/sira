@@ -11,6 +11,12 @@ flutter pub get
 flutter run -d web
 ```
 
+## Despliegue en GitHub Pages
+
+El workflow `.github/workflows/flutter.yml` compila al hacer push a `master` y también permite ejecución manual desde **Actions → Deploy Flutter Web to GitHub Pages → Run workflow**. Configura Pages para desplegar desde **GitHub Actions** en **Settings → Pages**. El artefacto se construye con el subpath del repositorio (`/<nombre-del-repositorio>/`).
+
+Para este repositorio la URL publicada es `https://yohanchantre4-ux.github.io/sira/`. Agrega esa URL a las redirect URLs permitidas en Supabase Auth para que los enlaces de recuperación de contraseña puedan volver a la app.
+
 La URL del proyecto y la clave publicable están configuradas con los valores entregados. Para usar otro proyecto, se pueden inyectar al compilar:
 
 ```sh
